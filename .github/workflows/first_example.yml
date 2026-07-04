@@ -10,6 +10,9 @@ jobs:
       - name: Welcome message
         run: echo "Hello All in today's class"
 
+      - name: checkout
+        run: actions/checkout@v6
+
       - name: List all the file
         run: ls
 
