@@ -20,7 +20,6 @@ jobs:
               run: sleep 10
 
     test_job:
-        needs: build_job
         runs-on: ubuntu-latest
         steps:
             - name: Download dragon file
@@ -32,7 +31,6 @@ jobs:
               run: grep -i "dragon" dragon.txt
 
     deploy_job:
-        needs: test_job
         runs-on: ubuntu-latest
         steps:
             - name: Download dragon file
